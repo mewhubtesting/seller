@@ -792,7 +792,7 @@ for i, v in pairs(game:GetService("Players"):GetPlayers()) do
 end
 
 
-
+local Section = MiscTab:CreateSection('Buyer Info')
 
 local Image = Section:CreateImage(".PlayerImage 🖼️", "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Players.LocalPlayer.UserId .."&width=420&height=420&format=png", UDim2.new(0, 100, 0, 100))
 
@@ -830,9 +830,9 @@ local Button = Section:CreateButton('.TPtoPlayer', function()
 end)
 
 
-LabelSection= Section:CreateLabel('                                  ')
 
 
+local Section = MiscTab:CreateSection('Selling Items')
 
 local Dropdown = Section:CreateDropdown('.BuyItems 🛍️ ', {"Pokemart 🏪","BP Shop 🏬", "Stoneshop 💎", "Arcade Shop 🎫"}, nil, 0.25, function(Value)
 
@@ -877,7 +877,7 @@ local itemsDuped = 0
 
 local Paragraph = Section:CreateParagraph('Item Dupe : ', '(1. make sure you put the item on a pokemon).')
 local Paragraph = Section:CreateParagraph('Item Dupe : ', '(2. make sure the pokemon is in PC(Box[1] and Slot[1])).')
-local Paragraph = Section:CreateParagraph('', '')
+local Section = MiscTab:CreateSection('Item Dupe')
 local Button = Section:CreateButton('.DupeItems Box[1] Slot[1] : Items(99x)🦌', function()
     local _p = nil
     for _, v in pairs(getgc(true)) do
@@ -1462,7 +1462,7 @@ end)
 
 
 
-LabelSection= Section:CreateLabel('                                  ')
+local Section = MiscTab:CreateSection('Pokemon Dupe')
 
 
 local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]","Box[4]", "Box[5]", "Box[6]", "Box[7]", "Box[8]", "Box[9]", "Box[10]"}, nil, 0.25, function(Value)
@@ -1751,7 +1751,7 @@ local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]",
         _p.MasterControl.WalkEnabled = true   
         end
     end
-    LabelSection= Section:CreateLabel('                                  ')
+    local Section = MiscTab:CreateSection('Useful')
     
     
     
@@ -1806,7 +1806,7 @@ local Button = Section:CreateButton('.Save 💾', function()
     _p.MasterControl.WalkEnabled = true
 end)
 
-LabelSection= Section:CreateLabel('                                  ')
+local Section = MiscTab:CreateSection('Misc')
 local Textbox = Section:CreateTextbox('.️GivePartyTypedItem ✉️🦌', "Item Name", function(Value)
 
 item = Value
@@ -2201,7 +2201,7 @@ local Tab = Window:CreateTab('', true, '', Vector2.new(524, 44), Vector2.new(36,
 local Section = Tab:CreateSection('Credits')
 
 local Label1 = Section:CreateLabel('.gg/Mewhub')
- Library:SetTransparency(20 / 100, true)
+ Library:SetTransparency(76 / 100, true)
 
 
 
