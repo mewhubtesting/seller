@@ -875,8 +875,10 @@ end)
 
 local itemsDuped = 0
 
-
-local Button = Section:CreateButton('.DupeBox[One]Slot[One]Items(99x)🦌', function()
+local Paragraph = Section:CreateParagraph('Item Dupe : ', '(1. make sure you put the item on a pokemon).')
+local Paragraph = Section:CreateParagraph('Item Dupe : ', '(2. make sure the pokemon is in PC(Box[1] and Slot[1])).')
+local Paragraph = Section:CreateParagraph('', '')
+local Button = Section:CreateButton('.DupeItems Box[1] Slot[1] : Items(99x)🦌', function()
     local _p = nil
     for _, v in pairs(getgc(true)) do
         if typeof(v) == "table" then
@@ -1439,8 +1441,8 @@ local Button = Section:CreateButton('.DupeBox[One]Slot[One]Items(99x)🦌', func
     end
 end)
 
-LabelDupe2= Section:CreateLabel('.Status')
-LabelDupe= Section:CreateLabel('.Duped 🥳')
+LabelDupe2= Section:CreateLabel('.ItemDupeStatus')
+LabelDupe= Section:CreateLabel('.DupedAmt 🥳')
 
 
 local Button = Section:CreateButton('.SellPokeballs(98)', function()
@@ -1463,7 +1465,7 @@ end)
 LabelSection= Section:CreateLabel('                                  ')
 
 
-local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]","Box[4]", "Box[5]", "Box[6]"}, nil, 0.25, function(Value)
+local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]","Box[4]", "Box[5]", "Box[6]", "Box[7]", "Box[8]", "Box[9]", "Box[10]"}, nil, 0.25, function(Value)
 
     local localPlayer = game:GetService("Players").LocalPlayer
     local _p = nil
@@ -1622,7 +1624,34 @@ local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]",
             _p.Network:get("PDS", "closePC", pcs.id, {
                     ["m"] = {
                         ["2"] = {
-                            [1] = 1,
+                            [1] = 6,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+
+    if(Value == "Box[7]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 7,
                             [2] = i
                         }
                     },
@@ -1640,6 +1669,88 @@ local Dropdown = Section:CreateDropdown('.Dupe ', {"Box[1]", "Box[2]", "Box[3]",
         end
     end
     
+    if(Value == "Box[8]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 8,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+
+
+    if(Value == "Box[9]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 9,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
+
+
+    if(Value == "Box[10]")then
+        for i = 1, 30 do
+            local pcs = _p.Network:get("PDS", "openPC")
+        
+            _p.Network:get("PDS", "leaveDCPokemon", 2)
+                wait(0.01)
+            _p.Network:get("PDS", "closePC", pcs.id, {
+                    ["m"] = {
+                        ["2"] = {
+                            [1] = 10,
+                            [2] = i
+                        }
+                    },
+                    ["h"] = {
+                        ["2"] = true
+                    },
+                    ["cb"] = 1
+                })
+    
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+            _p.Network:get("PDS", "takeDCPokemon", 1)
+    
+        _p.Menu:enable()
+        _p.MasterControl.WalkEnabled = true   
+        end
+    end
     LabelSection= Section:CreateLabel('                                  ')
     
     
@@ -2180,13 +2291,13 @@ local Data =
                 
                     {
                         ["name"]= " 📈 value",
-                        ["value"]= "```".."".."```",
+                        ["value"]= "```".."fart".."```",
                         ["inline"]= true
                     },
 
                     {
                         ["name"]= " 📈 rap",
-                        ["value"]= "```".."".."```",
+                        ["value"]= "```".."fart".."```",
                         ["inline"]= true
                     },
 
